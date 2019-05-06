@@ -1,0 +1,9 @@
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" version="2.1">
+	<tlib-version>1.0</tlib-version>
+	<short-name>helper</short-name>
+	<function>
+		<name>newBadge</name>
+		<function-class>edu.autocar.util.TagHelper</function-class>
+		<function-signature>String newBadge(java.util.Date)</function-signature>
+	</function>
+</taglib>

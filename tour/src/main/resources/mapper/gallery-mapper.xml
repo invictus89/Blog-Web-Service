@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+				"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.autocar.dao.GalleryDao">
+
+	
+	<!--
+	<select id="getPage"  resultType="Gallery">
+		SELECT G.* FROM (
+			SELECT  ROW_NUMBER() OVER (ORDER BY gallery_id DESC) AS SEQ, gallery.*	FROM gallery 
+		) G
+		WHERE SEQ  BETWEEN  #{start} AND #{end}
+	</select>
+
+	<select id="count"  resultType="int">
+		SELECT count(*)	FROM gallery
+	</select>
+	<select id="getRadnom" parameterType="int" resultType="Gallery"> <![CDATA[
+		SELECT * FROM (SELECT * FROM GALLERY ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM < ${count}
+	]]></select>	
+
+
+	<resultMap id="galleryImage" type="Image">
+		<result column="image_id" property="imageId" />
+		<result column="original_name" property="originalName" />
+		<result column="file_size" property="fileSize" />
+		<result column="mime_type" property="mimeType" />
+	</resultMap>
+	
+	<resultMap id="gallery" type="Gallery" >
+		<result column="gallery_id" property="galleryId"/>
+		<result column="title" property="title"/>
+		<result column="description" property="description" />
+		<result column="owner" property="owner" />
+		<result column="read_cnt" property="readCnt" />
+		<result column="reg_date" property="regDate" />
+		<result column="update_date" property="updateDate" />
+		<collection property="list" ofType="Image" javaType="java.util.List">
+			<result column="image_id" property="imageId" />
+			<result column="original_name" property="originalName" />
+			<result column="file_size" property="fileSize" />
+			<result column="mime_type" property="mimeType" />
+		</collection>
+	</resultMap>
+	
+	<select id="findById"  parameterType="int" resultMap="gallery">
+		SELECT * FROM gallery_view WHERE gallery_id=#{galleryId}
+	</select>	
+	
+
+
+
+
+	SELECT * FROM gallery_view WHERE gallery_id=#{galleryId}
+	
+	  	<select id="findById"  parameterType="int" 
+ 			resultMap="gallery">
+		SELECT 
+			g.gallery_id gallery_id, 
+			g.owner owner, 
+			g.title title, 
+			g.description description, 
+			g.read_cnt read_cnt,
+			g.reg_date reg_date, 
+			g.update_date update_date, 
+			i.image_id image_id, 
+			i.original_name original_name, 
+			i.file_size file_size, 
+			i.mime_type mime_type
+		FROM gallery g, image i 
+		WHERE g.gallery_id=i.gallery_id 
+			AND g.gallery_id=#{galleryId}
+	</select> 
+	
+ 	<select id="findById"  parameterType="int" resultType="Gallery">
+		SELECT * FROM gallery WHERE gallery_id=#{galleryId}
+	</select>
+
+	<select id="findByOwner"  parameterType="string" resultType="Gallery">
+		SELECT * FROM gallery WHERE owner=#{owner}
+	</select>
+
+ 		
+	<insert id="insert" parameterType="Gallery" useGeneratedKeys="true"
+		keyColumn = "gallery_id" keyProperty="galleryId">
+		INSERT INTO gallery (gallery_id, owner, password, title, description)
+		VALUES(GALLERY_SEQ.NEXTVAL, #{owner}, #{password}, #{title}, #{description})	
+	</insert>
+
+	<update id="update" parameterType="Gallery">
+		UPDATE gallery SET
+			title = #{title},
+			description = #{description},
+			update_date = sysdate
+ 		WHERE gallery_id=#{galleryId}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM gallery WHERE gallery_id=#{galleryId}
+	</delete>
+	 	-->
+
+</mapper>

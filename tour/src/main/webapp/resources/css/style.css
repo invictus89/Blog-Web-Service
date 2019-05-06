@@ -1,0 +1,29 @@
+header {
+	background: url('../images/Lighthouse.jpg');
+	background-size : 100%
+}
+
+/* a, a:visited, a:hover, a:active {
+	text-decoration: none
+}
+ */
+header.jumbotron {
+	margin-bottom:0;
+	border-radius: 0;
+}  
+
+div.card {
+	box-shadow: 2px 2px 2px lightgray;
+}
+
+.error {
+	color : red
+}
+
+.avata-sm {
+	width: 30px
+}
+
+.avata-md {
+	width: 50px
+}
