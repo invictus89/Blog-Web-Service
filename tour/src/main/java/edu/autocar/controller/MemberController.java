@@ -43,12 +43,13 @@ public class MemberController {
 		//이를 클라이언트는 알지 못한다. 클라이언트는 단순히 /join으로만 요청한 사실밖에 모른다.
 	}
 	
-
+	
 	@GetMapping("/id-check/{userId}")
 	@ResponseBody
 	public ResponseEntity<ResultMsg> checkId(@PathVariable String userId)
 			throws Exception {
-
+		//@pathVariable : Restful API 방식에서 자주 쓰인다.
+		//URL의 경로에 변수를 통해 데이터를 받을 수 있따.
 		if (service.getMember(userId)==null) {
 			return ResultMsg.response("ok", "사용가능한 ID 입니다.");
 		} else {

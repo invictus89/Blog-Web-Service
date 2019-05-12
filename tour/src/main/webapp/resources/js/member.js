@@ -14,6 +14,8 @@ $.fn.checkUserId = function() {
 		$.get('id-check/' + userId, function(data){
 			if(data.result == 'ok') {
 				msgSpan.html(data.message).removeClass('error');
+				//prop vs attr 
+				//checkbox's chekced 와 a 태그의 url 참고
 				submitBtn.prop('disabled', false);	// submit 버튼 활성화	
 				self.prop('disabled', true);	// ID 체크 버튼 비활성화
 			} else {
