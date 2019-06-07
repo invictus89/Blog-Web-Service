@@ -16,7 +16,7 @@ DROP TABLE IMAGE;
 CREATE TABLE IMAGE(
 	image_id 	NUMBER PRIMARY KEY,
 	gallery_id 	NUMBER REFERENCES GALLERY(gallery_id),
-	orginal_name VARCHAR2(128 CHAR),
+	original_name VARCHAR2(128 CHAR),
 	file_size   NUMBER,
 	mime_type   VARCHAR(56),
 	reg_date    DATE DEFAULT SYSDATE
@@ -29,3 +29,5 @@ drop sequence image_seq;
 
 drop table gallery;
 drop sequence gallery_seq;
+
+commit;

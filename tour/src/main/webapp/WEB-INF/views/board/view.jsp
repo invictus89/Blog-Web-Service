@@ -18,7 +18,7 @@ $(function(){
 
  	var opt = {
  	 		el : '#top-level-reply',
- 	 		writer : 'hong2', // '${USER.userId}',
+ 	 		writer : '${USER.userId}',
  	 		tableName : 'board',
  	 		groupId : ${board.boardId},
  	 		action : '${contextPath}/reply'

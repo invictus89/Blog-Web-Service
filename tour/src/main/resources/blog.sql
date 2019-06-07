@@ -2,6 +2,11 @@ DROP TABLE POST_ATTACHMENT;
 DROP TABLE POST;
 DROP TABLE BLOG;
 
+CREATE TABLE AVATAS(
+    user_id VARCHAR2(20) PRIMARY KEY,
+    image BLOB
+);
+
 create table board_attachment(
   attachment_id number primary key,
   board_id number,
@@ -38,10 +43,12 @@ CREATE TABLE BLOG(
 );
 
 CREATE SEQUENCE BLOG_SEQ;
+drop table blog;
+drop sequence blog_seq;
 
 CREATE TABLE POST(
   POST_ID	NUMBER PRIMARY KEY,
-  BLOG_ID 	NUMBER REFERENCES BLOG(BLOG_ID),
+  BLOG_ID 	NUMBER REFERENCES BLOG(blog_id),
   TITLE		VARCHAR2(256 BYTE),
   READ_CNT	NUMBER default 0,
   CONTENT	CLOB,
@@ -50,7 +57,7 @@ CREATE TABLE POST(
 );
 
 CREATE SEQUENCE POST_SEQ;
-
+drop sequence post_seq;
 CREATE TABLE POST_ATTACHMENT(
   ATTACHMENT_ID NUMBER PRIMARY KEY,
   POST_ID NUMBER REFERENCES POST(POST_ID),
@@ -81,5 +88,12 @@ insert into board(board_id, title, writer, password, read_cnt, content) values(b
 
 select * from member;
 
+truncate table post;
 
+select * 
+from (
+    select row_number() over (order by post_id desc) as seq, post.* from post
+) where seq between 1 and 2 and post_id = 1;
+
+select * from post;
 commit;

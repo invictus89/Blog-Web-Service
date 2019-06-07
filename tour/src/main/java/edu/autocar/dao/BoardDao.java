@@ -24,7 +24,7 @@ import edu.autocar.domain.Gallery;
  * 게시글 등록 / 수정 / 삭제 / 출력을 위한 DAO
  * 
  * @author 백상우
- * @Date : 2019. 3. 3. 
+ * @Date : 2019. 3. 8. 
  */
 public interface BoardDao extends CrudDao<Board, Integer> {
 	

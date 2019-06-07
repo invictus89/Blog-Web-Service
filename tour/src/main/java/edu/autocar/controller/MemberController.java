@@ -100,18 +100,18 @@ public class MemberController {
 			HttpSession session)
 			throws Exception {
 		if (result.hasErrors()) {
-			return "member/edit";
+			return "member/profile/edit";
 		}
 
 		if (service.update(member)) {
 			// 수정된 회원 정보로 세션 수정 
 			member = service.getMember(member.getUserId());
 			session.setAttribute("USER", member);			
-			return "redirect:/member/view";
+			return "redirect:/member/profile/view";
 		} else {
 			FieldError fieldError = new FieldError("member", "password", "비밀번호가 일치하지 않습니다");
 			result.addError(fieldError);
-			return "member/edit";
+			return "member/profile/edit";
 		}
 	}
 	
