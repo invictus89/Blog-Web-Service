@@ -7,6 +7,14 @@ import org.apache.ibatis.annotations.Update;
 
 import edu.autocar.domain.Avata;
 
+/**
+ * @FileName : AvataDao.java
+ * 
+ * 회원 이미지 처리를 위한 DB와의 연동
+ * 
+ * @author student
+ * @Date : 2019. 3. 5. 
+ */
 public interface AvataDao{
 	@Select("SELECT * FROM avata WHERE user_id=#{userId}")
 	Avata findById(String userId) throws Exception;

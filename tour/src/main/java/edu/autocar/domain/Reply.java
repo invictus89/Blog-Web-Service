@@ -4,6 +4,12 @@ import java.util.Date;
 
 import lombok.Data;
 
+/**
+ * @FileName : Reply.java
+ * 댓글 DTO
+ * @author 백상우
+ * @Date : 2019. 3. 9. 
+ */
 @Data
 public class Reply {
 	private int 	replyId;	// 댓글 번호

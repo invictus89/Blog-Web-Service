@@ -6,6 +6,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @FileName : PageInfo.java
+ * 게시글 / 블로그 / 갤러리 / 회원 목록 등 모든 정보들의 페이징 처리를 위한 DTO
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 2. 
+ * @param <T>
+ */
 @Data
 public class PageInfo<T> {
 	public int perPage;		// 1페이지당 데이터 건수

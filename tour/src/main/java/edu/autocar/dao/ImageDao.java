@@ -12,6 +12,14 @@ import org.apache.ibatis.annotations.Select;
 
 import edu.autocar.domain.Image;
 
+/**
+ * @FileName : ImageDao.java
+ * 
+ * 특정 갤러리 게시글의 여러 이미지들을 관리하기 위한 DAO
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 10. 
+ */
 public interface ImageDao {
 	
 	@Select("SELECT * FROM image WHERE gallery_id=#{galleryId}")

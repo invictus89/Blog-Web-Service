@@ -25,6 +25,13 @@ import edu.autocar.service.MemberService;
 import edu.autocar.util.ResponseMsg;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @FileName : AdminMemberController.java
+ *
+ * 관리자로 로그인 후 회원 관리 / 게시글 관리 / 블로그 관리 요청을 처리하는 컨트롤러
+ * @author 백상우
+ * @Date : 2019. 6. 5. 
+ */
 @Controller
 @RequestMapping("/admin/member")
 @Slf4j

@@ -9,6 +9,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @FileName : Image.java
+ *
+ * 갤러리 게시글에 업로드될 이미지 정보 DTO
+ * @author 백상우
+ * @Date : 2019. 3. 10. 
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

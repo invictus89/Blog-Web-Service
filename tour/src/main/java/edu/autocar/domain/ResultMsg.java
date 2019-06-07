@@ -8,6 +8,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @FileName : ResultMsg.java
+ * 
+ * 각 종 데이터 처리 요청 시 결과 데이터와 메시지를 담을 DTO
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 4. 
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

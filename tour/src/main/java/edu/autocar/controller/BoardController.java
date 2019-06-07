@@ -29,14 +29,23 @@ import edu.autocar.domain.PageInfo;
 import edu.autocar.service.BoardService;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @FileName : BoardController.java
+ *
+ * 게시글 출력 / 생성 / 수정 / 삭제 등을 관리하는 컨트롤러
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 1. 
+ */
 @Controller
 @RequestMapping("/board")
 @Slf4j
+
 public class BoardController {
 	@Autowired
 	BoardService service;
 
-
+	// 게시글 목록 출력 요청 메소드
 	@GetMapping("/list")
 	public void list(@RequestParam(value = "page", defaultValue = "1") int page, Model model) throws Exception {
 		
@@ -44,11 +53,13 @@ public class BoardController {
 		model.addAttribute("pi", pi);
 	}
 
+	//게시글 생성 페이지 요청 메소드
 	@GetMapping("/create")
 	public void getCreate(Board board) throws Exception {
 
 	}
 
+	// 게시글 생성 로직을 처리하는 메소드
 	@PostMapping("/create")
 	public String postCreate(@Valid Board board, BindingResult result) throws Exception {
 		if (result.hasErrors()) {
@@ -59,6 +70,7 @@ public class BoardController {
 		return "redirect:list";
 	}
 
+	// 특정 게시글의 상세 화면 페이지 요청 처리 메소드
 	@GetMapping("/view/{boardId}")
 	public String view(@PathVariable int boardId, Model model) throws Exception {
 		Board board = service.getBoard(boardId);
@@ -66,13 +78,15 @@ public class BoardController {
 		return "board/view";
 	}
 
+	// 특정 게시물의 수정 화면 요청 처리 메소드
 	@GetMapping("/edit/{boardId}")
 	public String getEdit(@PathVariable int boardId, Model model) throws Exception {
 		Board board = service.getBoard(boardId);
 		model.addAttribute("board", board);
 		return "board/edit";
 	}
-
+	
+	// 특정 게시글의 수정 요청 처리 메소드
 	@PostMapping("/edit/{boardId}")
 	public String postEdit(@RequestParam(value = "page") int page, @Valid Board board, BindingResult result)
 			throws Exception {
@@ -90,7 +104,8 @@ public class BoardController {
 			return "board/edit";
 		}
 	}
-
+	
+	// 특정 게시글 삭제 요청 처리 메소드
 	@DeleteMapping("/delete/{boardId}")
 	@ResponseBody
 	public ResponseEntity<Map<String, String>> delete(@PathVariable int boardId,

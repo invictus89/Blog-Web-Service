@@ -15,12 +15,29 @@ import edu.autocar.domain.Member;
 import edu.autocar.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @FileName : LoginController.java
+ *
+ * 로그인 요청 처리 컨트롤러
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 2. 
+ */
 @Controller
 @Slf4j
 public class LoginController {
 	@Autowired
 	MemberService service;
 	
+	/**
+	 * 로그인이 필요한 서비스 요청의 경우 페이징 처리 거절 이유와 로그인 후 이동할 페이지 주소를 저장할
+	 * 객체를 관리하는 메소드
+	 * 
+	 * @param loginInfo
+	 * @param target (로그인 후 자동 이동할 경로)
+	 * @param reason (페이지 요청 시 거절 이유)
+	 * @return
+	 */
 	@GetMapping("/login")
 	public String login(LoginInfo loginInfo,
 			@ModelAttribute("target") String target,

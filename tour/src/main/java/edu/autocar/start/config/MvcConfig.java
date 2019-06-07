@@ -115,12 +115,12 @@ public class MvcConfig implements WebMvcConfigurer {
 			    					"/admin/**", 
 			    					"/board/*"})
          		.excludePathPatterns(new String[] {
+         							"/member/join_success",
          							"/member/avata/*",
 		         					"/board/list",
 		         					"/board/view"});
 
     	registry.addInterceptor(adminInterceptor)
 				.addPathPatterns("/admin/**");
-
 	}
 }

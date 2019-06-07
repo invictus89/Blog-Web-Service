@@ -9,6 +9,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @FileName : FileInfo.java
+ *
+ * 게시글에 업로드할 파일 정보 DTO
+ * @author 백상우
+ * @Date : 2018. 3. 8. 
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

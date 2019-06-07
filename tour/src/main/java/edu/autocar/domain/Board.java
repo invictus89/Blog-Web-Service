@@ -13,6 +13,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @FileName : Board.java
+ *
+ * 게시글 정보 DTO
+ * 
+ * @author student
+ * @Date : 2019. 3. 5. 
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -47,6 +55,7 @@ public class Board {
 		updateDate = new Date();
 	}	
 	
+	// 게시글 마다 업로드 된 파일을 삭제하기 위한 변수
 	private int[] deleteFiles;
 	
 	public boolean isDeleteFile(int attachmentId) {

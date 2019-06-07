@@ -16,6 +16,14 @@ import org.apache.ibatis.jdbc.SQL;
 
 import edu.autocar.domain.Post;
 
+/**
+ * @FileName : PostDao.java
+ *
+ * 특정 회원의 블로그에 글 등록 / 삭제 / 수정 을 처리하는 DAO
+ *
+ * @author student
+ * @Date : 2019. 6. 7. 
+ */
 public interface PostDao extends CrudDao<Post, Integer> {
 	
 	final static String PAGING_SUBQUERY = 

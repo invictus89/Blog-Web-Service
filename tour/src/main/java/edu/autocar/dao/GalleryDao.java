@@ -16,6 +16,14 @@ import org.apache.ibatis.jdbc.SQL;
 
 import edu.autocar.domain.Gallery;
 
+/**
+ * @FileName : GalleryDao.java
+ *
+ * 갤러리 관리를 위한 DAO
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 8. 
+ */
 public interface GalleryDao{
 	final static String PAGING_SUBQUERY = "SELECT  ROW_NUMBER() OVER (ORDER BY gallery_id DESC) AS SEQ, gallery.* FROM gallery";;
 

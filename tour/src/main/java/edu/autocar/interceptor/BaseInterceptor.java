@@ -11,6 +11,12 @@ import org.springframework.web.servlet.FlashMapManager;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import org.springframework.web.servlet.support.RequestContextUtils;
 
+/**
+ * @FileName : BaseInterceptor.java
+ * flash 를 통한 로그인된 회원 정보 세션 관리를 위한 인터셉터 기본 설정
+ * @author 백상우
+ * @Date : 2019. 3. 2. 
+ */
 public class BaseInterceptor extends HandlerInterceptorAdapter {
 	@Autowired
 	ServletContext context;

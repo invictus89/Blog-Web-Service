@@ -7,6 +7,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
+/**
+ * @FileName : Post.java
+ * 블로그 아이디 별 포스팅 정보 DTO
+ * @author 백상우
+ * @Date : 2019. 3. 5. 
+ */
 @Data
 public class Post {
 	int postId;

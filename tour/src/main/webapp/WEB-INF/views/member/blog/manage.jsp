@@ -13,10 +13,10 @@ $(function(){
 <h2 class="my-5">
 <i class="fas fas-blog"></i>
 <c:if test="${blog.blogId==0}">
-	 블러그 만들기
+	 블로그 만들기
 </c:if>
 <c:if test="${blog.blogId!=0}">
-	블러그 관리
+	블로그 관리
 </c:if>
 </h2>
 

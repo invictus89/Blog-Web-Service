@@ -24,6 +24,7 @@ create table board(
   reg_date date default sysdate,
   update_date date default sysdate
 );
+
 create sequence board_seq;
 drop sequence board_seq;
 CREATE TABLE BLOG(
@@ -77,6 +78,8 @@ truncate table board;
 drop table board cascade constraint;
 
 insert into board(board_id, title, writer, password, read_cnt, content) values(board_seq.nextval, 'test1', 'hong', '111111', 0, 'test1');
+
+select * from member;
 
 
 commit;

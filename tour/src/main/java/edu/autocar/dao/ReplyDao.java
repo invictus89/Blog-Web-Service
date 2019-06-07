@@ -10,6 +10,14 @@ import org.apache.ibatis.annotations.Update;
 
 import edu.autocar.domain.Reply;
 
+/**
+ * @FileName : ReplyDao.java
+ *
+ * 게시글의 댓글과 대댓글을 관리하기 위한 DAO
+ *
+ * @author 백상우
+ * @Date : 2019. 3. 14. 
+ */
 public interface ReplyDao {
 	
 	@Select({

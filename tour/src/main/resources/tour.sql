@@ -23,3 +23,9 @@ CREATE TABLE IMAGE(
 );
 
 CREATE SEQUENCE IMAGE_SEQ;
+
+drop table image;
+drop sequence image_seq;
+
+drop table gallery;
+drop sequence gallery_seq;

@@ -11,6 +11,12 @@ import org.springframework.web.multipart.MultipartFile;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * @FileName : Member.java
+ * 회원 정보 DTO
+ * @author 백상우
+ * @Date : 2019. 3. 1. 
+ */
 @Data
 @AllArgsConstructor
 public class Member {

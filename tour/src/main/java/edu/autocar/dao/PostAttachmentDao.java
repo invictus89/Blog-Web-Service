@@ -12,6 +12,14 @@ import org.apache.ibatis.annotations.Select;
 
 import edu.autocar.domain.PostAttachment;
 
+/**
+ * @FileName : PostAttachmentDao.java
+ * 
+ * 특정 블로그의 포스팅되는 파일을 관리하기 위한 DAO
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 11. 
+ */
 public interface PostAttachmentDao {
 	
 	@Select("select * from post_attachment where post_id=#{postId}")

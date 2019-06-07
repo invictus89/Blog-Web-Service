@@ -10,6 +10,14 @@ import org.apache.ibatis.jdbc.SQL;
 
 import edu.autocar.domain.Blog;
 
+/**
+ * @FileName : BlogDao.java
+ *
+ * 블로그 생성/삭제/수정/페이징 처리 및 리스트 출력을 위한 DB와의 연동
+ * 
+ * @author student
+ * @Date : 2019. 6. 7. 
+ */
 public interface BlogDao {
 	final static String PAGING_SUBQUERY = "SELECT  ROW_NUMBER() OVER (ORDER BY gallery_id DESC) AS SEQ, blog.* FROM blog";
 

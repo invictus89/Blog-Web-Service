@@ -27,6 +27,13 @@ import edu.autocar.domain.ResultMsg;
 import edu.autocar.service.GalleryService;
 import edu.autocar.service.ImageService;
 
+/**
+ * @FileName : GalleryController.java
+ *	
+ * 게시글의 갤러리(이미지) 등록을 관리하는 컨트롤러
+ * @author 백상우
+ * @Date : 2019. 6. 10. 
+ */
 @Controller
 @RequestMapping("/gallery")
 public class GalleryController {
@@ -140,5 +147,4 @@ public class GalleryController {
 			return ResultMsg.response("fail", "비밀번호가 일치하지 않습니다.");
 		}
 	}
-	
 }

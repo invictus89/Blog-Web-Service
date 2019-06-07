@@ -28,6 +28,13 @@ import edu.autocar.domain.Member;
 import edu.autocar.domain.PageInfo;
 import edu.autocar.service.PostService;
 
+/**
+ * @FileName : PostController.java
+ * 
+ * 특정 회원의 블로그 리스트 출력 / 블로그 작성 / 
+ * @author 백상우
+ * @Date : 2019. 3. 14. 
+ */
 @Controller
 @RequestMapping("/blogs/{blogUser}")
 public class PostController {
@@ -35,7 +42,7 @@ public class PostController {
 	@Autowired
 	PostService service;
 
-	// 테스트를 위한 로그인 자동화
+	// 테스트를 위한 로그인 자동화 메소드
 	@ModelAttribute("USER")
 	public Member testUser(HttpSession session) {
 		Member m = (Member) session.getAttribute("USER");
@@ -47,31 +54,35 @@ public class PostController {
 		return m;
 	}
 	
+	// 로그인 된 회원의 블로그 리스트 출력 요청을 처리하는 메소드
 	@GetMapping("/list")
-	public String list(@RequestParam(value = "page", defaultValue = "1") int page, Model model) throws Exception {
-		
+	public String list(@PathVariable String blogUser, @RequestParam(value = "page", defaultValue = "1") int page, Model model) throws Exception {
 		PageInfo<Post> pi = service.getPage(page);
 		model.addAttribute("pi", pi);
 		return "post/list";
 	}
 
+	// 블로그 작성을 위한 페이지 요청
 	@GetMapping("/create")
-	public String getCreate(Post post) throws Exception {
+	public String getCreate(@PathVariable String blogUser, Post post, Model model) throws Exception {
+		model.addAttribute("blogUser", blogUser);
 		return "post/create";
 	}
 
+	// 블로그 작성 처리
 	@PostMapping("/create")
 	public String postCreate(
 			@PathVariable String blogUser,
 			@Valid Post post, BindingResult result) throws Exception {
 		if (result.hasErrors()) {
+			System.out.println("error occured");
 			return "post/create";
 		}
-
 		service.create(post);
 		return "redirect:/blogs/" + blogUser + "/list";
 	}
 
+	// 작성된 블로그를 보여주는 메소드
 	@GetMapping("/view/{postId}")
 	public String view(@PathVariable int postId, Model model) throws Exception {
 		Post post = service.getPost(postId);
@@ -79,6 +90,7 @@ public class PostController {
 		return "post/view";
 	}
 
+	// 작성된 블로그의 수정을 위한 페이지 요청을 처리하는 메소드
 	@GetMapping("/edit/{postId}")
 	public String getEdit(@PathVariable int postId, Model model) throws Exception {
 		Post post = service.getPost(postId);
@@ -86,6 +98,7 @@ public class PostController {
 		return "post/edit";
 	}
 
+	// 작성된 블로그의 수정을 처리하는 메소드
 	@PostMapping("/edit/{postId}")
 	public String postEdit(
 			@PathVariable String blogUser,
@@ -106,6 +119,7 @@ public class PostController {
 		}
 	}
 
+	// 작성된 블로그 글의 삭제를 처리하는 메소드
 	@DeleteMapping("/delete/{postId}")
 	@ResponseBody
 	public ResponseEntity<Map<String, String>> delete(@PathVariable int postId,
@@ -121,9 +135,6 @@ public class PostController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "application/json; charset=utf-8");
 		return new ResponseEntity<Map<String, String>>(map, headers, HttpStatus.OK);
-
 	}
-
-	
 	
 }

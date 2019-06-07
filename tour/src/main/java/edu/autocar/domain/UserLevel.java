@@ -2,6 +2,12 @@ package edu.autocar.domain;
 
 import lombok.Getter;
 
+/**
+ * @FileName : UserLevel.java
+ * 회원 정보 등급 DTO
+ * @author 백상우
+ * @Date : 2019. 3. 2. 
+ */
 @Getter
 public enum UserLevel {
 	ADMIN("ADMIN", "관리자"),

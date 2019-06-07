@@ -22,6 +22,7 @@ $(function(){
 </h2>
 
 <form:form modelAttribute="post" enctype="multipart/form-data">
+	<%-- <input type="hidden" name="blogId" value="${blogUser}"> --%>
 	<div class="form-group">
 		<label for="title">제목</label> 
 		<form:input path="title" class="form-control"/>

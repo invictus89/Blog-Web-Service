@@ -4,7 +4,7 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	<a class="navbar-brand" href="${contextPath}/"> <i class="fas fa-globe-americas"></i>
-		Travel.com
+		invictus.com
 
 	</a>
 	<button class="navbar-toggler" data-toggle="collapse"
@@ -13,8 +13,6 @@
 	</button>
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item"><a class="nav-link" href="#"> 
-				<i class="fas fa-list-ul"></i> 여행목록</a></li>
 			<li class="nav-item">
 				<a class="nav-link" href="${contextPath}/gallery/list"> 
 					<i class="fas fa-images"></i> 갤러리</a></li>
@@ -24,7 +22,7 @@
 			<c:if test="${not empty USER}">
 				<li class="nav-item">
 					<a class="nav-link" href="${contextPath}/blogs/${USER.userId}/list"> 
-						<i class="fas fas-blog"></i> 내 블러그</a></li>					
+						<i class="fas fas-blog"></i> 내 블로그</a></li>					
 			</c:if>
 		</ul>
 		<ul class="navbar-nav">

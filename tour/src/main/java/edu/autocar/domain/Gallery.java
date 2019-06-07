@@ -9,6 +9,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
+/**
+ * @FileName : Gallery.java
+ * 갤러리 게시글 정보 DTO
+ * @author 백상우
+ * @Date : 2019. 3. 9. 
+ */
 @Data
 public class Gallery {
 	

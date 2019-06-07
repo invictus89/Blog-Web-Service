@@ -4,6 +4,12 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
+/**
+ * @FileName : SHA256Util.java
+ * 회원 가입 시 비밀번호 암호화 처리를 위한 클래스
+ * @author 백상우
+ * @Date : 2019. 3. 13. 
+ */
 public class SHA256Util {
 	public static String generateSalt() {
 		byte[] salt = new byte[8];

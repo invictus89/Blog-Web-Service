@@ -13,6 +13,14 @@ import org.apache.ibatis.annotations.Select;
 import edu.autocar.domain.Board;
 import edu.autocar.domain.BoardAttachment;
 
+/**
+ * @FileName : BoardAttachmentDao.java
+ * 
+ * 특정 게시글의 파일 업로드를 위한 DAO
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 4. 
+ */
 public interface BoardAttachmentDao {
 	
 	@Select("SELECT * FROM board_attachment WHERE board_id=#{boardId}")

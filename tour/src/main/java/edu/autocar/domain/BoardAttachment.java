@@ -5,6 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @FileName : BoardAttachment.java
+ * 
+ * 특정 게시글의 파일 업로드 관리를 위한 DTO
+ * 
+ * @author 백상우
+ * @Date : 2018. 3. 5. 
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

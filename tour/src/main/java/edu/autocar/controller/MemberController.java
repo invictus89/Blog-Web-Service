@@ -27,23 +27,27 @@ import edu.autocar.service.AvataService;
 import edu.autocar.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @FileName : MemberController.java
+ * 
+ * 회원 가입과 회원 가입 간의 유횽성 검사를 처리하는 컨트롤러
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 4. 
+ */
 @Controller
 @Slf4j
 public class MemberController {
 	@Autowired
 	MemberService service;
 	
+	// 회원 가입 페이지 요청
 	@GetMapping("/join")
 	public String getJoin(Member member)  throws Exception {
 		return "member/join";
-		//return "redirect:/member/join" 와의 차이점을 반드시 알 것!
-		//redirect는 서버가 클라이언트에게 다시 해당  url로 다시 요청하라고 전달한다. 따라서 연결이 한 번 끊긴 후 재접속을 시도한다.
-		//이후 접속할 시 getmapping("/member/join")을 찾아서 url접속을 시도한다.
-		//반면 return "member/join"은 서버는  타일즈 설정에 맞게 member/join.jsp 페이지를 출력하고
-		//이를 클라이언트는 알지 못한다. 클라이언트는 단순히 /join으로만 요청한 사실밖에 모른다.
 	}
 	
-	
+	// 아이디 유효성 검사
 	@GetMapping("/id-check/{userId}")
 	@ResponseBody
 	public ResponseEntity<ResultMsg> checkId(@PathVariable String userId)
@@ -57,10 +61,12 @@ public class MemberController {
 		}
 	}
 	
+	// 회원 가입 요청 처리 
 	@PostMapping("/join")
 	public String postJoin(@Valid Member member, BindingResult result,
 			RedirectAttributes ra) throws Exception {
 		if (result.hasErrors()) {
+			//실패시 다시 가입 페이지로 이동
 			return "member/join";
 		}
 		
@@ -70,22 +76,25 @@ public class MemberController {
 		return "redirect:/member/join_success";			
 	}
 	
+	// 회원 가입 성공시 출력 페이지 요청
 	@GetMapping("/member/join_success")
 	public void joinSuccess(){}
-
 	
+	// 회원 정보 출력 요청 처리
 	@GetMapping("/member/profile/view")
 	public void view(Model model, HttpSession session) throws Exception {
 		Member user = (Member)session.getAttribute("USER");
 		Member member = service.getMember(user.getUserId());
 		model.addAttribute("member", member);
 	}
-
+	
+	// 회원 정보 수정 페이지 요청 처리
 	@GetMapping("/member/profile/edit")
 	public void getEdit(Model model, HttpSession session) throws Exception {
 		view(model, session);
 	}
 
+	// 회원 정보 수정 요청 처리
 	@PostMapping("/member/profile/edit")
 	public String postEdit(@Valid Member member, BindingResult result,
 			HttpSession session)

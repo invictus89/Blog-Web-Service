@@ -8,6 +8,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @FileName : LoginInfo.java
+ * 특정 서비스 이용 시 로그인 필요 여부와
+ * 로그인 필요 시 로그인 후 원래 가고 하였던 페이지 이동을 위한 로그인 정보 DTO
+ * @author 백상우
+ * @Date : 2019. 3. 2. 
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

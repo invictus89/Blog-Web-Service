@@ -17,6 +17,15 @@ import edu.autocar.domain.Blog;
 import edu.autocar.domain.Member;
 import edu.autocar.service.BlogService;
 
+/**
+ * @FileName : BlogController.java
+ *
+ * 로그인 후 해당 회원의 블로그 생성과 출력을 관리하는 컨트롤러 
+ * 수정 중...
+ * 
+ * @author 백상우
+ * @Date : 2019. 3. 12. 
+ */
 @Controller
 @RequestMapping("/member/blog")
 public class BlogController {
@@ -28,10 +37,13 @@ public class BlogController {
 		Member member = (Member)session.getAttribute("USER");
 		Blog blog = service.getBlogByOwner(member.getUserId());
 		if(blog == null) {
+			System.out.println("blog 생성 안됨");
 			model.addAttribute("blog", new Blog());
 		}
 		else {
+			System.out.println("blog 이미 있음");
 			model.addAttribute("blog", blog);
+			
 		}
 	}
 	

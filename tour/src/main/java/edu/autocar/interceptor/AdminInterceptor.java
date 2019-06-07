@@ -8,6 +8,12 @@ import org.springframework.stereotype.Component;
 
 import edu.autocar.domain.Member;
 
+/**
+ * @FileName : AdminInterceptor.java
+ * 권리자 권한이 필요한 서비스 요청 체크를 위한 인터셉터 설정
+ * @author 백상우
+ * @Date : 2019. 3. 2. 
+ */
 @Component
 public class AdminInterceptor extends BaseInterceptor {
 	@Override
