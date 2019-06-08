@@ -426,7 +426,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/join.JPG" width="65%" ></img>
+<img src="./images/join.JPG" width="65%" ></img>
 
 
 
@@ -434,7 +434,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/login.JPG" width="65%" ></img>
+<img src="./images/login.JPG" width="65%" ></img>
 
 
 
@@ -442,7 +442,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/modi_member.JPG" width="65%" ></img>
+<img src="./images/modi_member.JPG" width="65%" ></img>
 
 
 
@@ -450,7 +450,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/manage_members.JPG" width="65%" ></img>
+<img src="./images/manage_members.JPG" width="65%" ></img>
 
 
 
@@ -458,7 +458,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/manage_blog.JPG" width="65%" ></img>
+<img src="./images/manage_blog.JPG" width="65%" ></img>
 
 
 
@@ -466,7 +466,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/gallery.JPG" width="65%" ></img>
+<img src="./images/gallery.JPG" width="65%" ></img>
 
 
 
@@ -474,7 +474,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/board.JPG" width="65%" ></img>
+<img src="./images/board.JPG" width="65%" ></img>
 
 
 
@@ -482,7 +482,7 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/reply.JPG" width="65%" ></img>
+<img src="./images/reply.JPG" width="65%" ></img>
 
 #### 
 
@@ -490,5 +490,5 @@
 
 ------
 
-<img src="C:/%EA%B9%83%ED%97%88%EB%B8%8C/Blog-Web-Service/Blog-Web-Service/images/blog.JPG" width="65%" ></img>
+<img src="./images/blog.JPG" width="65%" ></img>
 
