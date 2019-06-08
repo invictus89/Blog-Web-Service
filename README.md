@@ -20,39 +20,39 @@
 
 1. 회원 가입
 
-   ![join](./images/join.JPG)
-
+   <img src="./images/join.JPG" width="65%" ></img>
+ 
 2. 로그인
 
-   ![login](./images/login.JPG)
+   <img src="./images/login.JPG" width="65%" ></img>
 
 3. 회원 정보 수정
 
-   ![modi_member](./images/modi_member.JPG)
+   <img src="./images/modi_member.JPG" width="65%" ></img>
 
 4. 회원 관리 (**관리자 권한**, 회원 정보 수정 및 다중 삭제 기능 포함)
 
-   ![manage_members](./images/manage_members.JPG)
+   <img src="./images/manage_members.JPG" width="65%" ></img>
 
 5. 블로그 관리[**수정 중..**.]
 
-   ![manage_blog](./images/manage_blog.JPG)
+   <img src="./images/manage_blog.JPG" width="65%" ></img>
 
 6. 갤러리 게시판 
 
-   ![gallery](./images/gallery.JPG)
+   <img src="./images/gallery.JPG" width="65%" ></img>
 
 7. 종합 게시판
 
-   ![board](./images/board.JPG)
+   <img src="./images/board.JPG" width="65%" ></img>
 
 8. 댓글
 
-   ![reply](./images/reply.JPG)
+   <img src="./images/reply.JPG" width="65%" ></img>
 
 9. 나만의 블로그[수정 중...]
 
-   ![blog](./images/blog.JPG)
+   <img src="./images/blog.JPG" width="65%" ></img>
 
 ## 핵심 코드
 
@@ -237,7 +237,7 @@
 
    행위가 아닌 자원(명사) 위주의 URL 처리
 
-   ![restful_url](./images/restful_url.JPG)
+   <img src="./images/restful_url.JPG" width="65%" ></img>
 
    
 
