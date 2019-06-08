@@ -9,14 +9,20 @@
 ## 개발 환경 및 사용 언어
 
 - Eclipse 
+
 - Apache Tomcat 8.5
+
 - HTML [boostrap]
+
 - CSS
+
 - Javascript / jQuery
+
 - Spring Framework
+
 - MyBatis
 
-
+  
 
 ## 기능 요약
 
