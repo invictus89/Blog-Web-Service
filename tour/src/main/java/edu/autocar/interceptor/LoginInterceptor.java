@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class LoginInterceptor extends BaseInterceptor {
-
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {

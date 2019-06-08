@@ -110,18 +110,15 @@ public class BoardController {
 	@ResponseBody
 	public ResponseEntity<Map<String, String>> delete(@PathVariable int boardId,
 			@RequestParam(value = "password") String password) throws Exception {
-
 		Map<String, String> map = new HashMap<>();
 		if (service.delete(boardId, password)) {
 			map.put("result", "success");
 		} else {
 			map.put("result", "비밀번호가 일치하지 않습니다.");
 		}
-
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "application/json; charset=utf-8");
 		return new ResponseEntity<Map<String, String>>(map, headers, HttpStatus.OK);
-
 	}
 
 }

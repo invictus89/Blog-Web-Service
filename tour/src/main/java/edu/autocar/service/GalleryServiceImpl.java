@@ -48,12 +48,8 @@ public class GalleryServiceImpl implements GalleryService {
 	}
 
 	private void saveImages(Gallery gallery) throws Exception {
-//		int galleryId, List<MultipartFile> list
-//		for(int ix=0; ix<list.size(); ix++) {
-//			MultipartFile file = list.get(ix);
 		for(MultipartFile file : gallery.getFiles()) {	
 			if(file.isEmpty()) continue;
-			
 			Image image = Image.builder()
 							.galleryId(gallery.getGalleryId())
 							.originalName(file.getOriginalFilename())

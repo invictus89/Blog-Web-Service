@@ -2,7 +2,7 @@ DROP TABLE POST_ATTACHMENT;
 DROP TABLE POST;
 DROP TABLE BLOG;
 
-CREATE TABLE AVATAS(
+CREATE TABLE AVATA(
     user_id VARCHAR2(20) PRIMARY KEY,
     image BLOB
 );
@@ -96,4 +96,6 @@ from (
 ) where seq between 1 and 2 and post_id = 1;
 
 select * from post;
+
+select * from member;
 commit;
